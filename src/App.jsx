@@ -1,13 +1,11 @@
-
+import Header from "./components/Header/Header";
 
 function App() {
-
   return (
     <>
-      <h1 className="text-4xl text-red-800">Vite + React</h1>
-      <h4 className="text-primary">Hello World</h4>
+    <Header></Header>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
