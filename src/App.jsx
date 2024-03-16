@@ -10,6 +10,10 @@ import { useEffect } from "react";
 function App() {
 const [recipe, setRecipe]= useState([]);
 
+  const handleClick = (item) => {
+    console.log(item);
+  };
+
 useEffect(()=>{
   fetch('recipes.json')
   .then(res => res.json())
@@ -22,7 +26,7 @@ useEffect(()=>{
       <Banner></Banner>
       <div className="grid grid-cols-12">
         <div className="col-span-7">
-          <Cards recipe={recipe}></Cards>
+          <Cards recipe={recipe} handleClick={handleClick}></Cards>
         </div>
         <div className="col-span-5">
           <WantToCooke></WantToCooke>

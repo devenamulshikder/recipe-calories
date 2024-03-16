@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
-const Cards = ({recipe}) => {
+const Cards = ({ recipe, handleClick }) => {
   return (
     <div className="grid grid-cols-2 gap-5">
       {recipe.map((item) => (
@@ -68,7 +68,10 @@ const Cards = ({recipe}) => {
                 </div>
               </div>
               <div className="card-actions">
-                <button className="btn bg-[#0BE58A] rounded-full text-black mt-4">
+                <button
+                  onClick={() => handleClick(item)}
+                  className="btn bg-[#0BE58A] rounded-full text-black mt-4"
+                >
                   Want to Cook
                 </button>
               </div>

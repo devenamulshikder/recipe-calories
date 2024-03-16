@@ -18,7 +18,7 @@ const Header = () => {
               <input
                 type="text"
                 placeholder="Search"
-                className="input input-bordered w-24 md:w-auto"
+                className="input input-bordered w-24 rounded-full md:w-auto"
               />
             </div>
             <div className="dropdown dropdown-end">

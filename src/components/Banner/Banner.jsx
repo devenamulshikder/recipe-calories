@@ -21,11 +21,11 @@ const Banner = () => {
               on our shopping list every week.
             </p>
             <div>
-              <button className="btn btn-accent rounded-full mr-8">
-                Get Started
+              <button className="btn border-none bg-[#0BE58A] rounded-full mr-8">
+                Explore Now
               </button>
               <button className="btn rounded-full bg-transparent text-white">
-                Feed Back
+                Our Feedback
               </button>
             </div>
           </div>
