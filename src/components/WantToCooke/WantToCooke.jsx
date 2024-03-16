@@ -27,7 +27,7 @@ const WantToCooke = () => {
                     <td>20 minutes</td>
                     <td>400 calories</td>
                     <button className="btn bg-[#0BE58A] rounded-full">
-                      abdf
+                      Preparing
                     </button>
                   </tr>
                 </tbody>
