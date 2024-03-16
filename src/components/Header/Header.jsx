@@ -1,7 +1,7 @@
 
 const Header = () => {
   return (
-    <div className="lg:flex">
+    <div className="lg:flex my-8">
       <div className="flex-1">
         <div className="navbar bg-base-100">
           <div className="flex-1">
@@ -27,7 +27,7 @@ const Header = () => {
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
               >
-                <div className="w-10 rounded-full bg-green-500">
+                <div className="w-10 rounded-full bg-[#0BE58A]">
                   <div className="p-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
