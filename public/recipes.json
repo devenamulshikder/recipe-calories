@@ -1,0 +1,98 @@
+[
+  {
+    "recipe_id": 1,
+    "recipe_name": "Spaghetti Carbonara",
+    "short_description": "Classic Italian pasta dish with creamy sauce and crispy bacon.",
+    "ingredients": [
+      "400g spaghetti",
+      "150g pancetta or bacon",
+      "3 large eggs",
+      "100g Parmesan cheese",
+      "2 cloves garlic, minced",
+      "Salt and black pepper to taste"
+    ],
+    "preparing_time": "20 min",
+    "calories": "450 calories",
+    "recipe_image": "spaghetti_carbonara.jpg"
+  },
+  {
+    "recipe_id": 2,
+    "recipe_name": "Chicken Stir Fry",
+    "short_description": "Quick and flavorful chicken stir fry with vegetables.",
+    "ingredients": [
+      "550g chicken breast, sliced",
+      "120ml soy sauce",
+      "200g broccoli florets",
+      "1 red bell pepper, sliced",
+      "2 cloves garlic, minced",
+      "2 tablespoons vegetable oil"
+    ],
+    "preparing_time": "25 min",
+    "calories": "320 calories",
+    "recipe_image": "chicken_stir_fry.jpg"
+  },
+  {
+    "recipe_id": 3,
+    "recipe_name": "Vegetable Curry",
+    "short_description": "Aromatic and spicy vegetarian curry with assorted vegetables.",
+    "ingredients": [
+      "400g mixed vegetables (carrots, potatoes, peas, etc.)",
+      "200ml coconut milk",
+      "2 tablespoons curry powder",
+      "1 onion, diced",
+      "2 cloves garlic, minced",
+      "1 tablespoon ginger, grated"
+    ],
+    "preparing_time": "30 min",
+    "calories": "280 calories",
+    "recipe_image": "vegetable_curry.jpg"
+  },
+  {
+    "recipe_id": 4,
+    "recipe_name": "Caprese Salad",
+    "short_description": "Simple and refreshing salad with tomatoes, mozzarella, and basil.",
+    "ingredients": [
+      "3 large tomatoes, sliced",
+      "200g fresh mozzarella cheese, sliced",
+      "1 bunch fresh basil leaves",
+      "2 tablespoons balsamic vinegar",
+      "3 tablespoons extra virgin olive oil",
+      "Salt and black pepper to taste"
+    ],
+    "preparing_time": "15 min",
+    "calories": "220 calories",
+    "recipe_image": "caprese_salad.jpg"
+  },
+  {
+    "recipe_id": 5,
+    "recipe_name": "Beef Tacos",
+    "short_description": "Tasty Mexican-style tacos with seasoned beef and toppings.",
+    "ingredients": [
+      "500g ground beef",
+      "1 packet taco seasoning mix",
+      "12 small corn or flour tortillas",
+      "1 cup shredded lettuce",
+      "1 cup diced tomatoes",
+      "1/2 cup shredded cheddar cheese"
+    ],
+    "preparing_time": "20 min",
+    "calories": "380 calories",
+    "recipe_image": "beef_tacos.jpg"
+  },
+  {
+    "recipe_id": 6,
+    "recipe_name": "Mushroom Risotto",
+    "short_description": "Creamy and comforting Italian rice dish with mushrooms.",
+    "ingredients": [
+      "300g Arborio rice",
+      "400g mushrooms, sliced",
+      "1 onion, diced",
+      "2 cloves garlic, minced",
+      "1 liter vegetable broth",
+      "1/2 cup dry white wine"
+    ],
+    "preparing_time": "35 min",
+    "calories": "300 calories",
+    "recipe_image": "mushroom_risotto.jpg"
+  }
+]
