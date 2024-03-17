@@ -1,10 +1,13 @@
-const WantToCooke = () => {
+/* eslint-disable react/jsx-key */
+/* eslint-disable react/prop-types */
+const WantToCooke = ({cooke}) => {
+  console.log(cooke);
   return (
     <div>
       <div className="card bg-base-100 shadow-2xl ml-5">
         <div className="p-4">
           <div className="text-[#282828] font-semibold text-2xl text-center">
-            <h3>Want to cook: 01</h3>
+            <h3>Want to cook: {cooke.length}</h3>
           </div>
           <div className="divider lg:px-16"></div>
           <div className=" text-[#878787]">
@@ -21,15 +24,17 @@ const WantToCooke = () => {
                 </thead>
                 <tbody>
                   {/* row 1 */}
-                  <tr className="bg-base-200">
-                    <th>1</th>
-                    <td>Chicken Caesar Salad</td>
-                    <td>20 minutes</td>
-                    <td>400 calories</td>
-                    <button className="btn bg-[#0BE58A] rounded-full">
-                      Preparing
-                    </button>
-                  </tr>
+                  {cooke.map((c, index) => (
+                    <tr className="bg-base-200 space-y-2">
+                      <th>{index + 1}</th>
+                      <td>{c?.recipe_name}</td>
+                      <td>{c?.preparing_time}utes</td>
+                      <td>{c?.calories}</td>
+                      <button className="btn bg-[#0BE58A] rounded-full">
+                        Preparing
+                      </button>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -76,6 +81,6 @@ const WantToCooke = () => {
       </div>
     </div>
   );
-}
+};
 
 export default WantToCooke

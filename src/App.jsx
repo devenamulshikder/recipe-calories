@@ -5,17 +5,17 @@ import Header from "./components/Header/Header";
 import WantToCooke from "./components/WantToCooke/WantToCooke";
 import { useEffect } from "react";
 
-// main code is this
 
 function App() {
 const [recipe, setRecipe]= useState([]);
 
+const [cooke, setCooke]= useState([])
   const handleClick = (item) => {
-    console.log(item);
+    setCooke(c => [...c, item])
   };
 
 useEffect(()=>{
-  fetch('recipes.json')
+  fetch('./recipes.json')
   .then(res => res.json())
   .then(data=> setRecipe(data))
 },[])
@@ -29,7 +29,7 @@ useEffect(()=>{
           <Cards recipe={recipe} handleClick={handleClick}></Cards>
         </div>
         <div className="col-span-5">
-          <WantToCooke></WantToCooke>
+          <WantToCooke cooke={cooke}></WantToCooke>
         </div>
       </div>
     </>

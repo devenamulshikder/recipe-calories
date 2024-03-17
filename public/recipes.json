@@ -13,7 +13,7 @@
     ],
     "preparing_time": "20 min",
     "calories": "450 calories",
-    "recipe_image": "spaghetti_carbonara.jpg"
+    "recipe_image": "https://i.ibb.co/J2nLbLQ/Rectangle-20170.png"
   },
   {
     "recipe_id": 2,
@@ -29,7 +29,7 @@
     ],
     "preparing_time": "25 min",
     "calories": "320 calories",
-    "recipe_image": "chicken_stir_fry.jpg"
+    "recipe_image": "https://i.ibb.co/d0RD6Y4/Rectangle-20170-1.png"
   },
   {
     "recipe_id": 3,
@@ -45,7 +45,7 @@
     ],
     "preparing_time": "30 min",
     "calories": "280 calories",
-    "recipe_image": "vegetable_curry.jpg"
+    "recipe_image": "https://i.ibb.co/kStCHc7/abdelrahman-sarayreh-21-BL58le9-I0-unsplash.jpg"
   },
   {
     "recipe_id": 4,
@@ -61,7 +61,7 @@
     ],
     "preparing_time": "15 min",
     "calories": "220 calories",
-    "recipe_image": "caprese_salad.jpg"
+    "recipe_image": "https://i.ibb.co/mCLD0CB/kalpa-mahagamage-SUmfcaqvc-JA-unsplash.jpg"
   },
   {
     "recipe_id": 5,
@@ -77,7 +77,7 @@
     ],
     "preparing_time": "20 min",
     "calories": "380 calories",
-    "recipe_image": "beef_tacos.jpg"
+    "recipe_image": "https://i.ibb.co/7RcrSW2/abdelrahman-sarayreh-ex-Xbe93vq-Y-unsplash.jpg"
   },
   {
     "recipe_id": 6,
@@ -93,6 +93,6 @@
     ],
     "preparing_time": "35 min",
     "calories": "300 calories",
-    "recipe_image": "mushroom_risotto.jpg"
+    "recipe_image": "https://i.ibb.co/ZWXP0VD/abdelrahman-sarayreh-QQ-8us5-MWd4-unsplash.jpg"
   }
 ]

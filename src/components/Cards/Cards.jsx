@@ -8,7 +8,7 @@ const Cards = ({ recipe, handleClick }) => {
           <div className="card bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
               <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                src={item?.recipe_image}
                 alt="Shoes"
                 className="rounded-xl"
               />
@@ -42,7 +42,7 @@ const Cards = ({ recipe, handleClick }) => {
                       d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                     />
                   </svg>
-                  <p>{item.preparing_time}minutes</p>
+                  <p>{item.preparing_time}utes</p>
                 </div>
                 <div className="flex">
                   <svg
