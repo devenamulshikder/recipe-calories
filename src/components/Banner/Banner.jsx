@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div>
+    <div className="p-4">
       <div
         className="hero min-h-screen rounded-3xl my-8"
         style={{
@@ -10,7 +10,7 @@ const Banner = () => {
         <div className="hero-overlay rounded-3xl bg-opacity-40"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="">
-            <h1 className="mb-5 text-5xl font-bold">
+            <h1 className="mb-5 lg:text-5xl text-2xl font-bold">
               Discover an exceptional cooking class tailored for you!
             </h1>
             <p className="mb-5">

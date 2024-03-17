@@ -46,11 +46,11 @@ function App() {
       />
       <Header></Header>
       <Banner></Banner>
-      <div className="grid grid-cols-12">
-        <div className="col-span-7">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 p-5">
+        <div className="col-span-2">
           <Cards recipe={recipe} handleClick={handleClick}></Cards>
         </div>
-        <div className="col-span-5">
+        <div>
           <WantToCooke
             cooke={cooke}
             handleClickShow={handleClickShow}

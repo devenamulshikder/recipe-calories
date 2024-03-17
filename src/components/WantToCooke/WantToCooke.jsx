@@ -4,11 +4,11 @@ import React from "react";
 const WantToCooke = ({ cooke, handleClickShow, preparing }) => {
   // Calculate total time and total calories
   const totalTime = preparing.reduce(
-    (acc, curr) => acc + parseInt(curr.preparing_time),
+    (prevTime, currentTime) => prevTime + parseInt(currentTime.preparing_time),
     0
   );
   const totalCalories = preparing.reduce(
-    (acc, curr) => acc + parseInt(curr.calories),
+    (prevTime, currentTime) => prevTime + parseInt(currentTime.calories),
     0
   );
 
@@ -16,7 +16,7 @@ const WantToCooke = ({ cooke, handleClickShow, preparing }) => {
     <div>
       <div className="card bg-base-100 shadow-2xl ml-5">
         <div className="p-4">
-          <div className="text-[#282828] font-semibold text-2xl text-center">
+          <div className="text-[#282828] font-semibold lg:text-2xl text-center">
             <h3>Want to cook: {cooke.length}</h3>
           </div>
           <div className="divider lg:px-16"></div>
@@ -24,7 +24,7 @@ const WantToCooke = ({ cooke, handleClickShow, preparing }) => {
             <div className="overflow-x-auto">
               <table className="table">
                 {/* head */}
-                <thead className="text-xl">
+                <thead className="lg:text-xl">
                   <tr>
                     <th></th>
                     <th>Name</th>
@@ -53,7 +53,7 @@ const WantToCooke = ({ cooke, handleClickShow, preparing }) => {
             </div>
           </div>
           <div>
-            <h1 className="text-[#282828] font-semibold text-2xl text-center lg:mt-8">
+            <h1 className="text-[#282828] font-semibold lg:text-2xl text-center lg:mt-8">
               Currently cooking: {preparing.length}
             </h1>
           </div>
@@ -62,7 +62,7 @@ const WantToCooke = ({ cooke, handleClickShow, preparing }) => {
             <div className="overflow-x-auto">
               <table className="table">
                 {/* head */}
-                <thead className="text-xl">
+                <thead className="lg:text-xl">
                   <tr>
                     <th></th>
                     <th>Name</th>

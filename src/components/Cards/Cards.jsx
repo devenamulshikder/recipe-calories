@@ -21,7 +21,7 @@ const Cards = ({ recipe, handleClick }) => {
     }
   };
   return (
-    <div className="grid grid-cols-2 gap-5">
+    <div className="grid lg:grid-cols-2 grid-cols-1 md:grid-cols-1 gap-5 p-4">
       {recipe.map((item) => (
         <div key={item.id}>
           <div className="card bg-base-100 shadow-xl">
