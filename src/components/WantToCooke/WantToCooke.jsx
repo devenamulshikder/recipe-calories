@@ -1,8 +1,17 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
+import React from "react";
+
 const WantToCooke = ({ cooke, handleClickShow, preparing }) => {
-  // console.log(cooke);
+  // Calculate total time and total calories
+  const totalTime = preparing.reduce(
+    (acc, curr) => acc + parseInt(curr.preparing_time),
+    0
+  );
+  const totalCalories = preparing.reduce(
+    (acc, curr) => acc + parseInt(curr.calories),
+    0
+  );
+
   return (
     <div>
       <div className="card bg-base-100 shadow-2xl ml-5">
@@ -26,7 +35,7 @@ const WantToCooke = ({ cooke, handleClickShow, preparing }) => {
                 <tbody>
                   {/* row 1 */}
                   {cooke.map((c, index) => (
-                    <tr className="bg-base-200 space-y-2">
+                    <tr className="bg-base-200 space-y-2" key={index}>
                       <th>{index + 1}</th>
                       <td>{c?.recipe_name}</td>
                       <td>{c?.preparing_time}utes</td>
@@ -63,13 +72,22 @@ const WantToCooke = ({ cooke, handleClickShow, preparing }) => {
                 </thead>
                 <tbody>
                   {preparing.map((p, i) => (
-                    <tr className="bg-base-200">
-                      <th>{i + 1}</th>
-                      <td>{p.recipe_name}</td>
-                      <td>{p.preparing_time}</td>
-                      <td>{p.calories}</td>
-                    </tr>
+                    <React.Fragment key={i}>
+                      <tr className="bg-base-200">
+                        <th>{i + 1}</th>
+                        <td>{p.recipe_name}</td>
+                        <td>{p.preparing_time}</td>
+                        <td>{p.calories}</td>
+                      </tr>
+                    </React.Fragment>
                   ))}
+                  {/* Total row */}
+                  <tr className="bg-base-200">
+                    <th></th>
+                    <td></td>
+                    <td>Total time = {totalTime} minutes</td>
+                    <td>Total calories = {totalCalories} calories</td>
+                  </tr>
                 </tbody>
               </table>
             </div>

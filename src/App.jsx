@@ -5,6 +5,8 @@ import Cards from "./components/Cards/Cards";
 import Header from "./components/Header/Header";
 import WantToCooke from "./components/WantToCooke/WantToCooke";
 import { useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [recipe, setRecipe] = useState([]);
@@ -29,6 +31,19 @@ function App() {
 
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition:Bounce
+      />
       <Header></Header>
       <Banner></Banner>
       <div className="grid grid-cols-12">

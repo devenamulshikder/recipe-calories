@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 /* eslint-disable react/prop-types */
 const Cards = ({ recipe, handleClick }) => {
@@ -14,8 +15,9 @@ const Cards = ({ recipe, handleClick }) => {
         ...prevSelectedItems,
         item.recipe_id,
       ]);
+      toast.success("You have selected item!");
     } else {
-      alert("Item already selected!");
+      toast.error("You have already selected item!");
     }
   };
   return (
