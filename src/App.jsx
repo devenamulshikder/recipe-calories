@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import Banner from "./components/Banner/Banner";
 import Cards from "./components/Cards/Cards";
@@ -5,20 +6,26 @@ import Header from "./components/Header/Header";
 import WantToCooke from "./components/WantToCooke/WantToCooke";
 import { useEffect } from "react";
 
-
 function App() {
-const [recipe, setRecipe]= useState([]);
+  const [recipe, setRecipe] = useState([]);
+  const [cooke, setCooke] = useState([]);
+  const [preparing, setPreparing] = useState([]);
 
-const [cooke, setCooke]= useState([])
   const handleClick = (item) => {
-    setCooke(c => [...c, item])
+    setCooke((c) => [...c, item]);
   };
 
-useEffect(()=>{
-  fetch('./recipes.json')
-  .then(res => res.json())
-  .then(data=> setRecipe(data))
-},[])
+  const handleClickShow = (item) => {
+    const updatedCooke = cooke.filter((c) => c !== item);
+    setPreparing((p) => [...p, item]);
+    setCooke(updatedCooke);
+  };
+
+  useEffect(() => {
+    fetch("./recipes.json")
+      .then((res) => res.json())
+      .then((data) => setRecipe(data));
+  }, []);
 
   return (
     <>
@@ -29,7 +36,11 @@ useEffect(()=>{
           <Cards recipe={recipe} handleClick={handleClick}></Cards>
         </div>
         <div className="col-span-5">
-          <WantToCooke cooke={cooke}></WantToCooke>
+          <WantToCooke
+            cooke={cooke}
+            handleClickShow={handleClickShow}
+            preparing={preparing}
+          ></WantToCooke>
         </div>
       </div>
     </>

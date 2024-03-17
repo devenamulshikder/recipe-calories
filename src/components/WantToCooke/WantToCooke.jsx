@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
-const WantToCooke = ({cooke}) => {
-  console.log(cooke);
+const WantToCooke = ({ cooke, handleClickShow, preparing }) => {
+  // console.log(cooke);
   return (
     <div>
       <div className="card bg-base-100 shadow-2xl ml-5">
@@ -30,7 +31,10 @@ const WantToCooke = ({cooke}) => {
                       <td>{c?.recipe_name}</td>
                       <td>{c?.preparing_time}utes</td>
                       <td>{c?.calories}</td>
-                      <button className="btn bg-[#0BE58A] rounded-full">
+                      <button
+                        onClick={() => handleClickShow(c)}
+                        className="btn bg-[#0BE58A] rounded-full"
+                      >
                         Preparing
                       </button>
                     </tr>
@@ -41,7 +45,7 @@ const WantToCooke = ({cooke}) => {
           </div>
           <div>
             <h1 className="text-[#282828] font-semibold text-2xl text-center lg:mt-8">
-              Currently cooking: 02
+              Currently cooking: {preparing.length}
             </h1>
           </div>
           <div className="divider lg:px-16"></div>
@@ -58,29 +62,22 @@ const WantToCooke = ({cooke}) => {
                   </tr>
                 </thead>
                 <tbody>
-                  {/* row 1 */}
-                  <tr className="bg-base-200">
-                    <th>1</th>
-                    <td>Spaghetti Bolognese</td>
-                    <td>30 minutes</td>
-                    <td>600 calories</td>
-                  </tr>
-                  {/* row 2 */}
-                  <tr className="bg-base-200">
-                    <th>1</th>
-                    <td>Spaghetti Bolognese</td>
-                    <td>30 minutes</td>
-                    <td>600 calories</td>
-                  </tr>
+                  {preparing.map((p, i) => (
+                    <tr className="bg-base-200">
+                      <th>{i + 1}</th>
+                      <td>{p.recipe_name}</td>
+                      <td>{p.preparing_time}</td>
+                      <td>{p.calories}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
           </div>
-          {/* <div className="divider"></div> */}
         </div>
       </div>
     </div>
   );
 };
 
-export default WantToCooke
+export default WantToCooke;

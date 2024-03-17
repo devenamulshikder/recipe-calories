@@ -1,6 +1,23 @@
 /* eslint-disable no-undef */
+
+import { useState } from "react";
+
 /* eslint-disable react/prop-types */
 const Cards = ({ recipe, handleClick }) => {
+  const [selectedItems, setSelectedItems] = useState([]);
+
+  const handleCardClick = (item) => {
+    console.log(item);
+    if (!selectedItems.includes(item.recipe_id)) {
+      handleClick(item);
+      setSelectedItems((prevSelectedItems) => [
+        ...prevSelectedItems,
+        item.recipe_id,
+      ]);
+    } else {
+      alert("Item already selected!");
+    }
+  };
   return (
     <div className="grid grid-cols-2 gap-5">
       {recipe.map((item) => (
@@ -69,10 +86,11 @@ const Cards = ({ recipe, handleClick }) => {
               </div>
               <div className="card-actions">
                 <button
-                  onClick={() => handleClick(item)}
+                  onClick={() => handleCardClick(item)}
                   className="btn bg-[#0BE58A] rounded-full text-black mt-4"
                 >
                   Want to Cook
+                  
                 </button>
               </div>
             </div>
